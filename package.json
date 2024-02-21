@@ -1,0 +1,46 @@
+{
+	"name": "vite-plugin-embeddable-c-cpp-headers",
+	"version": "0.0.1",
+	"description": "A simple plugin for transforming vite build artifacts to embeddable C/C++ headers",
+	"author": "bgenia",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bgenia/vite-plugin-embeddable-c-cpp-headers.git"
+	},
+	"type": "module",
+	"exports": {
+		"import": "./build/index.js",
+		"types": "./build/index.d.ts"
+	},
+	"files": ["build", "readme.md"],
+	"scripts": {
+		"build:tsc": "tsc",
+		"lint": "pnpm biome lint src",
+		"lint:fix": "pnpm biome lint --apply src",
+		"build": "pnpm lint && pnpm build:tsc",
+		"prepublishOnly": "pnpm build",
+		"release": "pnpm version -m 'chore(release): %s' --",
+		"postversion": "git push && git push --tags"
+	},
+	"dependencies": {
+		"common-tags": "^1.8.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.5.3",
+		"@tsconfig/strictest": "^2.0.3",
+		"@types/node": "^20.11.19",
+		"typescript": "^5.3.3",
+		"vite": "^5.1.4"
+	},
+	"keywords": [
+		"vite",
+		"vite-plugin",
+		"embedded",
+		"embeddable",
+		"c",
+		"c++",
+		"headers",
+		"transformer"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"extends": ["@tsconfig/strictest/tsconfig.json"],
+	"include": ["src"],
+	"compilerOptions": {
+		"lib": ["ES2022"],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"outDir": "build",
+		"target": "ES2022",
+		"declaration": true
+	}
+}
