@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-embeddable-c-cpp-headers",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "A simple plugin for transforming vite build artifacts to embeddable C/C++ headers",
 	"author": "bgenia",
 	"license": "MIT",
@@ -13,7 +13,10 @@
 		"import": "./build/index.js",
 		"types": "./build/index.d.ts"
 	},
-	"files": ["build", "readme.md"],
+	"files": [
+		"build",
+		"readme.md"
+	],
 	"scripts": {
 		"build:tsc": "tsc",
 		"lint": "pnpm biome lint src",
